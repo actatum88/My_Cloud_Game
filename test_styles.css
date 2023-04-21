@@ -1,0 +1,74 @@
+body {
+    background-color: lightskyblue;
+}
+
+#background {
+    position: relative; /* absolute? */
+    background-position: center bottom;
+    background-size: cover;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+#sun {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: yellow;
+}
+
+#sun::before,
+#sun::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 50px solid transparent;
+    border-top-color: yellow;
+}
+
+#sun::before {
+    transform: rotate(30deg);
+}
+
+#sun::after {
+    transform: rotate(60deg);
+}
+
+#game {
+    width: 500px;
+    height: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+#guessInput {
+    width: 200px;
+    padding: 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+}
+
+#submitGuess {
+    background-color: blue;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#submitGuess:hover {
+    background-color: darkblue;
+}
