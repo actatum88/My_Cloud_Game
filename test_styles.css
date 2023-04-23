@@ -3,11 +3,13 @@ body {
 }
 
 #background {
-    background-image: url("styles/images/cloud_background.png") no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
+    height: 100vh;
+    background-image: url("styles/images/cloud_background.png");
     background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 #sun {
@@ -60,9 +62,7 @@ body {
 #dogButton {
     background-image: url('styles/images/kevin.png');
     background-repeat: no-repeat;
-    background-color: transparent;
     position: sticky;
     cursor: pointer;
-    left: calc(50% - 100px);
   }
   
