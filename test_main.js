@@ -1,5 +1,8 @@
 #!/usr/bin/node
-// Test file for our cloud game :)
+/**
+ * Test file for our cloud game :)
+ */
+
 // Provide positive phrases
 const phrases = [
     "You are awesome",
@@ -7,16 +10,26 @@ const phrases = [
     "You rock"
 ];
 
-// Retrieves a random choice from phrases
+/**
+ * Retrieves a random choice from the `phrases` array.
+ *
+ * @returns {string} A random phrase from the `phrases` array.
+ */
 function getRandomPhrase() {
     const index = Math.floor(Math.random() * phrases.length);
     return phrases[index];
 }
 
-// Encrypts the phrase
-function enPhrase(phrase) {
+/**
+ * Encrypts the provided phrase by shifting each character in the string by a certain number of positions.
+ *
+ * @param {string} phrase - The phrase to encrypt.
+ * @param {number} shift - The number of positions to shift each character by.
+ * @returns {string} The encrypted phrase.
+ */
+function encryptPhrase(phrase, shift) {
     let encryptedPhrase = "";
-    for (let i=0; i < phrases.length; i++) {
+    for (let i = 0; i < phrase.length; i++) {
         const charCode = phrase.charCodeAt(i);
         // if the character is a space between words
         if (charCode === 32) {
@@ -26,8 +39,12 @@ function enPhrase(phrase) {
             encryptedPhrase += String.fromCharCode(encryptedCharCode);
         }
     }
+    return encryptedPhrase;
 }
 
+// Get a random phrase and encrypt it
 const phrase = getRandomPhrase();
 const enPhrase = encryptPhrase(phrase, 3);
-console.log(phrase)
+
+console.log(phrase);
+console.log(enPhrase);
