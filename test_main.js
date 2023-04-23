@@ -48,3 +48,32 @@ const enPhrase = encryptPhrase(phrase, 3);
 
 console.log(phrase);
 console.log(enPhrase);
+
+function playMyAudio() {
+    const audio = document.getElementById("game-audio");
+    audio.currentTime = 0;
+    audio.play();
+    startTimer();
+  }
+  
+  let seconds = 0;
+  let timer;
+  
+  function startTimer() {
+    timer = setInterval(() => {
+      seconds++;
+      console.log(`Timer: ${seconds} seconds`);
+    }, 120000);
+  }
+  
+  function stopTimer() {
+    clearInterval(timer);
+  }
+  
+const dogButton = document.getElementById("submitGuess(); startTimer(); playMyAudio();");
+//Timer display?? const timerDisplay = document.createElement("p");
+let timeLeft = 60;
+
+function submitGuess() {
+  // your code for handling the guess goes here
+}
