@@ -28,7 +28,6 @@ ctx.lineTo(20, 100);
 ctx.stroke();
 
 // Draw the letters in the outer circle
-function DrawOuterCircle (letters){
   const letters = 'A B C D E F G H I J K L M N O P Q R S T U V W X Y Z';
   const angle = (2 * Math.PI) / letters.length;
     for (let i = 0; i < letters.length; i++) {
@@ -36,16 +35,14 @@ function DrawOuterCircle (letters){
     const y = 100 + 70 * Math.sin(i * angle - Math.PI / 2);
     ctx.fillText(letters[i], x, y);
   }
-};
+
 
 // Set the font for the inner circle letters
 ctx.font = '12px Arial';
 
 // Draw the letters in the inner circle
-function insideLetters (letters) {
   for (let i = 0; i < letters.length; i++) {
     const x = 100 + 35 * Math.cos(i * angle - Math.PI / 2);
     const y = 100 + 35 * Math.sin(i * angle - Math.PI / 2);
     ctx.fillText(letters[i], x, y);
   }
-};

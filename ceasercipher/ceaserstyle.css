@@ -2,8 +2,14 @@ canvas {
   border: 1px solid #000;
 }
 
+.outer *, .outer {
+  margin: 0;
+  padding: 0;
+}
+
 .outer {
   position: relative;
+  padding-top: 100%;
   top: 10px;
   left: 10px;
   width: 200px;
