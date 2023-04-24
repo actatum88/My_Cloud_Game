@@ -1,7 +1,10 @@
-#!/usr/bin/node 
+#!/usr/bin/node
 
 const canvas = document.getElementById('keyCanvas');
 const ctx = canvas.getContext('2d');
+
+//container for circles
+var chart = new 
 
 // Draw the outer circle
 ctx.beginPath();
@@ -25,21 +28,21 @@ ctx.lineTo(20, 100);
 ctx.stroke();
 
 // Draw the letters in the outer circle
-const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-const angle = (2 * Math.PI) / letters.length;
-for (let i = 0; i < letters.length; i++) {
-  const x = 100 + 70 * Math.cos(i * angle - Math.PI / 2);
-  const y = 100 + 70 * Math.sin(i * angle - Math.PI / 2);
-  ctx.fillText(letters[i], x, y);
-}
+  const letters = 'A B C D E F G H I J K L M N O P Q R S T U V W X Y Z';
+  const angle = (2 * Math.PI) / letters.length;
+    for (let i = 0; i < letters.length; i++) {
+    const x = 100 + 70 * Math.cos(i * angle - Math.PI / 2);
+    const y = 100 + 70 * Math.sin(i * angle - Math.PI / 2);
+    ctx.fillText(letters[i], x, y);
+  }
+
 
 // Set the font for the inner circle letters
-ctx.font = 'bold 14px Arial';
+ctx.font = '12px Arial';
 
 // Draw the letters in the inner circle
-for (let i = 0; i < letters.length; i++) {
-  const x = 100 + 35 * Math.cos(i * angle - Math.PI / 2);
-  const y = 100 + 35 * Math.sin(i * angle - Math.PI / 2);
-  ctx.fillText(letters[i], x, y);
-}
-x
+  for (let i = 0; i < letters.length; i++) {
+    const x = 100 + 35 * Math.cos(i * angle - Math.PI / 2);
+    const y = 100 + 35 * Math.sin(i * angle - Math.PI / 2);
+    ctx.fillText(letters[i], x, y);
+  }
