@@ -22,7 +22,18 @@ let timeLeft = TIME_LIMIT;
 let timerInterval = null;
 let remainingPathColor = COLOR_CODES.info.color;
 
-document.getElementById("app").innerHTML = `
+
+// React code?????? Maybe you do need a backend
+// This could maybe just be done inside the HTML since there don't seem to be
+// Any conditions under which you would add this.
+// The logic seems to merely be, "upon execution, add this to the html" so why not just add it to the html anyway instead of doing it with JS?
+// In any event it generates this error:
+// Uncaught TypeError: document.getElementById(...) is null
+// Maybe this would work if the variables inserted via interpolation if the variables were set at the time this code runs?
+// It seems like *maybe* the variables referenced are null here because the code that sets them has not actually ran
+
+
+document.getElementById('app').innerHTML = `
 <div class="base-timer">
   <svg class="base-timer__svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
     <g class="base-timer__circle">

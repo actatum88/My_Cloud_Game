@@ -1,0 +1,202 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+  
+#game {
+    height: 100vh;
+    background-color: #4ba3c7;
+    background-image: url('sky.jpg');
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+  
+#clouds {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+  
+.cloud {
+    width: 100px;
+    height: 70px;
+    background-image: url('cloud.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 10px;
+}
+  
+#decoder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+    margin-top: 50px;
+}
+  
+h1 {
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 20px;
+}
+  
+#phrase-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+  
+#encryption {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+  
+#encoded-phrase {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+  
+label {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+  
+input[type="text"] {
+    font-size: 1.2em;
+    padding: 5px;
+    margin-bottom: 20px;
+}
+  
+button[type="submit"] {
+    font-size: 1.2em;
+    padding: 5px 20px;
+    background-color: #4ba3c7;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+  
+button[type="submit"]:hover {
+    background-color: #387c9d;
+}
+
+#objective-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 70%;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.5);
+    text-align: center;
+    z-index: 1;
+}
+
+#objective-box p {
+    font-size: 1.2em;
+}
+
+body {
+    background-color: lightskyblue;
+    background-image: url('images/cloud_background.png');
+    background-repeat: no-repeat;
+}
+
+/* #background { */
+/*     position: relative; /\* absolute? *\/ */
+/*     background-position: center bottom; */
+/*     background-size: cover; */
+/*     top: 0; */
+/*     left: 0; */
+/*     width: 100%; */
+/*     height: 100%; */
+/*     z-index: -1; */
+/*     height: 100vh; */
+/*     background-image: url("styles/images/cloud_background.png"); */
+/*     background-size: cover; */
+/*     display: flex; */
+/*     flex-direction: column; */
+/*     align-items: center; */
+/*     justify-content: center; */
+/* } */
+
+#sun {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: yellow;
+}
+
+#sun::before,
+#sun::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 50px solid transparent;
+    border-top-color: yellow;
+}
+
+#sun::before {
+    transform: rotate(30deg);
+}
+
+#sun::after {
+    transform: rotate(60deg);
+}
+
+#game {
+    width: 500px;
+    height: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+#guessInput {
+    width: 200px;
+    padding: 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+}
+
+
+#dogButton {
+    background-image: url('images/kevin.png');
+    background-repeat: no-repeat;
+    position: sticky;
+    cursor: pointer;
+  }
+
+#submitGuess {
+    background-color: blue;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#submitGuess:hover {
+    background-color: darkblue;
+}

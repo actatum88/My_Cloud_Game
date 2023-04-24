@@ -1,17 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
+<meta charset="UTF-8">
+
     <head>
-        <title>Game Title</title>
-        <link rel="stylesheet" href="test_styles.css">
+	<title>Caesar Cipher Cloud Game</title>
+	<!-- <title>out of the clouds</title> -->
+
+	<!-- / -->
+	<link rel="stylesheet" href="styles/test_styles.css">
+	<link rel="stylesheet" href="styles/style.css">
+	<script type="text/javascript" src="scripts/test_main.js"></script>
+
+	<script src="scripts/caesarCipher.js"></script>
+	<script src="scripts/gameState.js"></script>
+
+	<!-- Phrases looks like it will be used for something later but the list is now in test_main.js -->
+	<!-- <script src="scripts/phrases.js"></script> -->
+
+	<script src="scripts/userInterface.js"></script>
+
+	<!-- Countdown -->
+	<link rel="stylesheet" href="styles/countdown.css">
+	<script src="scripts/countdown.js"></script>
+
+	<!-- Require is not defined, modules cannot be used in clientside JS
+		<script src="scripts/server.js"></script> -->
+
+	<!-- /ceasercipher/ -->
+	<link rel="stylesheet" href="styles/ceaserstyle.css">
+	<script src="scripts/key.js"></script>
     </head>
+
     <body>
-        <div id="background"></div>
-        <div id="sun"></div>
-        <div id="game">
-            <h1>Game Title</h1>
-            <p>Guess the phrase to make the clouds go away:</p>
-            <input type="text" id="guessInput">
-            <button id="submitGuess">Submit</button>
-        </div>
+
+	<header></header>
+	<div id="background"></div>
+	<div id="sun"></div>
+	<div id="game">
+
+	    <h1>Caesar Cipher Cloud Game</h1>
+
+	    <p>Guess the phrase to make the clouds go away:</p>
+
+	    <input type="text" id="guessInput">
+
+	    <button id="submitGuess">Submit</button>
+
+	    <button id="dogButton" onClick="submitGuess(); playMyAudio();">
+		<img src="styles/images/kevin.png" alt="Kevin">
+	    </button>
+
+	    <audio id="game-audio" src="audio/game_audio.wav"></audio>
+
+	</div>
+
+	<!-- What is this div? -->
+	<div id="app"></div>
+
+	<header>
+	    <canvas id="keyCanvas"></canvas>
+		<!-- No idea what's happening here, not one file had opening tr or tbody tags -->
+		<!-- </tr> -->
+		<!-- </tbody> -->
+		<div id="countdown"></div>
+
+	</header>
+
+	<footer>
+
+        </footer>
+
     </body>
+
 </html>
