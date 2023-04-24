@@ -13,14 +13,9 @@ function selectRandomPhrase(phrases) {
   // Select a random phrase from the array
   const randomPhrase = phrases[Math.floor(Math.random() * phrases.length)];
   // Encode the phrase using the Caesar cipher with a key of 3
-  const encodedPhrase = caesarCipher.encode(randomPhrase, 3);
-  return {
-    encodedPhrase: encodedPhrase,
-    randomPhrase: 
+  let encodedPhrase = caesarCipher.encode(randomPhrase, 3);
+  return encodedPhrase;
 }
-
-// Select a random phrase from the array and encode it using the Caesar cipher with a key of 3
-const encodedPhrase = selectRandomPhrase(phrases);
 
 // Get the phrase-box element from the DOM
 const phraseBox = document.querySelector('#phrase-box');
