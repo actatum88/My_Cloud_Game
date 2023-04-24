@@ -17,6 +17,10 @@ function selectRandomPhrase(phrases) {
   return encodedPhrase;
 }
 
+selectRandomPhrase(phrases) = PhraseOnScreen;
+
+let PhraseOnScreen = document.getElementById("encryptedPhrase").innerHTML;
+
 // Get the phrase-box element from the DOM
 const phraseBox = document.querySelector('#phrase-box');
 
@@ -28,5 +32,5 @@ phraseElement.textContent = caesarCipher.decode(encodedPhrase, 3);
 // Add the phrase element to the phrase-box element
 phraseBox.insertBefore(phraseElement, phraseBox.firstChild);
 
-export { encodedPhrase };
+export { PhraseOnScreen };
 export { randomPhrase };
