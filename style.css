@@ -21,16 +21,16 @@ body {
 }
 
 #dogButton {
-    background-image: url('images/kevin.png');
+    background-image: url('styles/images/kevin.png');
     background-repeat: no-repeat;
     position: absolute;
     right: 9%;
     transform: translateX(50%);
     cursor: pointer;
-    width: 0.05px;
-    height: 0.05px;
-    background-color: transparent;
+    width: 5%;
+    height: 5%;
     border: none;
+    background-color: transparent;
 }
 
 
